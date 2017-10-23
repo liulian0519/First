@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>西邮导航-点亮你的网络生活</title>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+
+	<body onload="date()">
+
+		<div class="header">
+			<a class="logo"></a>
+			<div class="weather">
+				<div id="weather-time"></div>
+				<div class="weather-list">
+					<iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=3"></iframe>
+				</div>
+			</div>
+		</div>
+		<div id="search" align="center">
+			<table>
+				<tr>
+					<td>
+						<ul>
+							<li style="display:block;" class="baidu-current"><img src="img/image/search_mark/1_wangye_baidu.gif" /></li>
+							<li style="display:none;"><img src="img/image/search_mark/1_wangye_google.gif" /></li>
+							<li style="display:none;"><img src="img/image/search_mark/1_wangye_sougou.gif" /></li>
+							<li style="display:none;"><img src="img/必应.jpg" /></li>
+							<li style="display:none;"><img src="img/书本.png" /></li>
+						</ul>
+					</td>
+					<td id="from_box" style="padding-left:10px;">
+						<form id="from_baidu" style="display:block" action="http://www.baidu.com/baidu" target="_blank" method="get">
+							<input name="" type="hidden" value="baidu" />
+							<input type="text" name="word" />
+							<input class="button" type="submit" value="搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'" />
+						</form>
+						<form id="from_google" style="display:none" action="http://www.google.com/search" target="_blank" method="get">
+							<input type="text" name="q" />
+							<input class="button" type="submit" value="搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'" />
+						</form>
+						<form id="from_sougou" style="display:none" action="http://www.sogou.com/web" target="_blank" name="sogou_queryform">
+							<input type="text" name="query">
+							<input class="button" type="submit" value="搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'" />
+						</form>
+						<form id="from_bing" style="display:none" action="http://www.bing.com/web" target="_blank" method="get">
+							<input type="text" name="bing" />
+							<input class="button" type="submit" value="搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'" />
+						</form>
+						<form id="from_lib" style="display:none" action="http://lib.changxiaoyuan.com" target="_blank" method="get">
+							<input type="text" name="lib" />
+							<input class="button" type="submit" value="搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'" />
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="main">
+			<div class="main-left">
+				<div class="main-one">
+					<ul class="link-school">
+						<li>
+							<a href="http://www.xupt.edu.cn" target="_blank">西邮官网</a>
+						</li>
+						<li>
+							<a href="http://xiaobao.xupt.edu.cn" target="_blank">西邮校报</a>
+						</li>
+						<li>
+							<a href="http://222.24.19.201" target="_blank">教务系统</a>
+						</li>
+						<li>
+							<a href="http://www.xiyou.edu.cn/jgsz/yxsz/ty3532.htm" target="_blank">体育部官网</a>
+						</li>
+						<li>
+							<a href="http://webmail.xupt.edu.cn" target="_blank">邮箱系统</a>
+						</li>
+						<li>
+							<a href="http://lib.changxioayuan.com" target="_blank">图书续借</a>
+						</li>
+						<li>
+							<a href="http://www.lib.xiyou.edu.cn/eresources/list.asp?class=cndb" target="_blank">西邮图书馆</a>
+						</li>
+						<li>
+							<a href="http://elearn.xupt.edu.cn/eol/homepage/common/" target="_blank">教学综合平台</a>
+						</li>
+						<li>
+							<a href="http://gr.xupt.edu.cn" target="_blank">研究生部</a>
+						</li>
+						<li>
+							<a href="http://zhaosheng.xupt.edu.cn" target="_blank">招生信息</a>
+						</li>
+						<li>
+							<a href="http://www.xiyouren.com" target="_blank">西邮人</a>
+						</li>
+						<li>
+							<a href="http://tieba.baidu.com/f?kw=%CE%F7%B0%B2%D3%CA%B5%E7" target="_blank">西邮贴吧</a>
+						</li>
+						<li>
+							<a href="http://www.changxiaoyuan.com/" target="_blank">畅校园</a>
+						</li>
+						<li>
+							<a href="http://bp.changxiaoyuan.com/" target="_blank">百盘</a>
+						</li>
+						<li>
+							<a href="http://xiyou.benke.chaoxing.com/" target="_blank">超星尔雅</a>
+						</li>
+						<li>
+							<a href="https://www.xiyoulinux.org/" target="_blank">linux实验室</a>
+						</li>
+						<li>
+							<a href="http://www.xiyounet.org/" target="_blank">网络协会</a>
+						</li>
+						<li>
+							<a href="http://sta.xupt.edu.cn/" target="_blank">软件协会</a>
+						</li>
+						<li>
+							<a href="https://www.xiyoumobile.com/" target="_blank">3G实验室</a>
+						</li>
+						<li>
+							<a href="http://www.creatshare.com/" target="_blank">Creatshare实验室</a>
+						</li>
+					</ul>
+				</div>
+				<div class="main-two">
+					<ul class="web">
+						<li>
+							<a style="cursor:pointer" class="edit" onclick="tiao()">网址编辑</a>
+						</li>
+					</ul>
+				</div>
+				<div class="other">
+					<div class="other-title">
+						<div class="other-title-imgjob"></div>
+						<h3>考研就业</h3>
+					</div>
+					<div class="other-link1">
+						<ul class="link">
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">研招信息</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">沪江考研</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">免费考研</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">学信网</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">大家网</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">借智</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">领英</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">实习僧</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">拉勾网</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">大街网</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">庞果</a>
+							</li>
+							<li>
+								<a href="http://yz.chsi.com.cn/" target="_blank">猎聘</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="other">
+					<div class="other-title">
+						<div class="other-title-imgread"></div>
+						<h3>学习阅读</h3>
+					</div>
+					<div class="other-link">
+						<ul class="link">
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">慕课</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">网易公开课</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">云课堂</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">学堂在线</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">Ted</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">what-if</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">手工客</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">萌码</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">W3school</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">百度百家</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">腾讯大家</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">Haker News</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">36Kr</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">虎嗅网</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">游戏葡萄</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">知乎日报</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="other">
+					<div class="other-title">
+						<div class="other-title-imgs"></div>
+						<h3>互联网说</h3>
+					</div>
+					<div class="other-link">
+						<ul class="link">
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">互联网的那些事</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">产品100</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">产品帮</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">产品经理沙龙</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">前端网</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">蓝色理想</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">CSDN</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">花瓣网</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">程序员之家</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">编程爱好者</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">编程论坛</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">PUDN</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">SDC设计师导航</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">黄蜂网</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">UI设计</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">素材中国</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="other">
+					<div class="other-title">
+						<div class="other-title-imglife"></div>
+						<h3>生活娱乐</h3>
+					</div>
+					<div class="other-link">
+						<ul class="link">
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">豆果</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">豆瓣FM</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">虾米音乐</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">喜马拉雅</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">网易云音乐</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">飞碟说</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">暴走漫画</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">YouTube精选</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">AcFun</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">Bilibili</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">堆糖</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">淘宝</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">蝉游记</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">面包旅行</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">我爱搜罗</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">惠惠网</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="other">
+					<div class="other-title">
+						<div class="other-title-imgtool"></div>
+						<h3>实用工具</h3>
+					</div>
+					<div class="other-link">
+						<ul class="link">
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">地图查询</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">快递查询</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">公交查询</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">火车票查询</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">飞机票查询</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">邮编查询</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">安全期查询</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">time is</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">番茄土豆</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">在线尺子</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">印象笔记</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">秀米</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">iPresst</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">iClound</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">114dns</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">盘搜一下</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="other">
+					<div class="other-title">
+						<div class="other-title-imggame"></div>
+						<h3>游戏天堂</h3>
+					</div>
+					<div class="other-link">
+						<ul class="link">
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">枪战英雄</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">创想兵团</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">天空之舞</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">创世联盟</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">欢乐斗地主</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">坦克英雄</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">创世兵魂</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">Touch热舞</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">枪魂</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">火线精英</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">死神VS火影</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">开心消消乐</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">冒险与挖矿</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">谁是卧底</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">球队经理</a>
+							</li>
+							<li>
+								<a href="http://www.imooc.com/" target="_blank">Agar.io</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="main-right">
+				<div class="home">
+					<div class="home-list">
+						<p class="home-list-btn">院系官网</p>
+						<div class="e">
+							<ul class="home-list-link">
+								<li>
+									<a href="http://tg.xupt.edu.cn/" target="_blank">通院</a>
+								</li>
+								<li>
+									<a href="http://dianxin.xupt.edu.cn/" target="_blank">电院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">计算机</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">自动化</a>
+								</li>
+								<li>
+									<a href="http://jgy.xupt.edu.cn/index.html" target="_blank">经管</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">理学院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">人文社科</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">外语院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">树莓院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">继职教育</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">国防教育</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">物联网</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">国际教育</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">马克思</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">体育部</a>
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+					<div class="home-list">
+
+						<p class="home-list-btn1">微博主页</p>
+						<div class="f">
+							<ul class="home-list-link">
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮官微</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮团委</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">记者团</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">校团委</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">校学生会</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">校青协</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">老区学生会</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮社联</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">电院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">自动化</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">经管院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">理学院院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">树莓院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">Creatshare</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">畅校园</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮人</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮男女</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">在西邮</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">微博协会</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮图馆会</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮跆拳道</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮校园</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮广播</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">Linux小组</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="home-list">
+
+						<p class="home-list-btn2">人人主页</p>
+						<div class="g">
+							<ul class="home-list-link">
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">记者团</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">校团委</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮学生会</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">校青协</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮广播</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">大活</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">研究生会</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">通院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">电院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">自动化</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">经管院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">树莓院</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">Creatshare</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮记</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮动漫社</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮影协</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮DIY</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮torch</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西邮idea</a>
+								</li>
+								<li>
+									<a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">军事协会</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="l">
+					<ul class="more">
+						<li>
+							<a href=""><img src="img/map.png" id="img" onclick="showimg()">
+								<p>西邮地图</p>
+							</a>
+						</li>
+						<li>
+							<a href="http://ztc.xupt.edu.cn:8080/" target="_blank"><img src="img/直通车.png">
+								<p>信息直通车</p>
+							</a>
+						</li>
+						<li>
+							<a href="http://sztz.xupt.edu.cn/index.php?iframe=1" target="_blank"><img src="img/身份.png">
+								<p>素质拓展</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="special">
+					<h3>校园专题</h3>
+					<hr />
+					<ul class="special-box">
+						<li>
+							<a href="http://zqcccccc.h5.baomitu.com/app/8ddf4.html" target="_blank"><img src="img/庆祝.png" </a>
+								<p>西邮校庆</p>
+						</li>
+						<li>
+							<a href="http://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDIyNjMwMA==&hid=4&sn=1330f2855464072376becafca78a62fc#wechat_redirect" target="_blank"><img src="img/使用手册.png" </a>
+								<p>新生指南</p>
+						</li>
+						<li>
+							<a href="http://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDIyNjMwMA==&hid=1&sn=afbe6866c057c4f31b54856e19a5a629#wechat_redirect" target="_blank"><img src="img/时钟.png" </a>
+								<p>小畅大事件</p>
+						</li>
+						<li>
+							<a href="http://www.rabbitpre.com/m/M2j7mjbM1?sui=zAz1vEpG&lc=1&from=singlemessage&isappinstalled=0#from=share" target="_blank"><img src="img/井.png" </a>
+								<p>井盖的梦想</p>
+						</li>
+
+						<li>
+							<a href="http://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDIyNjMwMA==&hid=5&sn=9f53abd30cd527fdb6a27f2b9b7fd102#wechat_redirect" target="_blank"><img src="img/锦囊.png" </a>
+								<p>笔面锦囊</p>
+						</li>
+						<li>
+							<a href="" target="_blank"><img src="img/咖.png" </a>
+								<p>周边吃喝玩乐</p>
+						</li>
+
+					</ul>
+				</div>
+				<div class="qrcode" onmouseout="this.className='qrcode'" onmouseover="this.className='qrcode1'">
+					<h3>官方微信</h3>
+					<hr />
+					<div class="qrcode-img">
+						<img src="img/weixin.png" />
+					</div>
+				</div>
+				<div class="func" id="go_top">
+					<img src="img/回到顶部.png" />
+
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>Copyright @202-2016 西邮导航 All Rights Reserved</p>
+			<p>CreatShare 冀ICP备 13001401号</p>
+		</div>
+		<script>
+			var search = document.getElementById("search");
+			var formbox = document.getElementById('from_box');
+			var forms = formbox.getElementsByTagName("form");
+			var ul = search.getElementsByTagName("ul")[0];
+			var li = ul.getElementsByTagName("li");
+			var length = li.length;
+
+			li[0].onclick = function() {
+				for(var i = 1; i < length; i++) {
+					li[i].style.display =
+						"block";
+				}
+			}
+			var n = 0; //第一个显示表单的位置
+			for(var i = 1; i < length; i++) {
+				li[i].onclick = function(a) {
+					return function() {
+						//交换显示的html内容
+						var temp = li[0].innerHTML;
+						li[0].innerHTML = this.innerHTML;
+						this.innerHTML = temp;
+						for(var j = 1; j < length; j++) {
+							li[j].style.display =
+								"none";
+						}
+						
+						hidden_from(); //隐藏表单
+						if(li[0].innerHTML.indexOf('baidu') > 0) {
+							document.getElementById('from_baidu').style.display = 'block';
+						} else if(li[0].innerHTML.indexOf('google') > 0) {
+							document.getElementById('from_google').style.display = 'block';
+						} else if(li[0].innerHTML.indexOf('sougou') > 0) {
+							document.getElementById('from_sougou').style.display = 'block';
+						} else if(li[0].innerHTML.indexOf('必应') > 0) {
+							document.getElementById('from_bing').style.display = 'block';
+						} else if(li[0].innerHTML.indexOf('书本') > 0) {
+							document.getElementById('from_lib').style.display = 'block';
+						}
+						
+					}
+				}(i);
+				li[i].onmouseover = function() {
+					this.style.border =
+						"darkgray 1px solid";
+					this.style.background =
+						"white";
+				}
+				li[i].onmouseout =
+					function() {
+						this.style.border = "1px";
+						this.style.background = "inherit";
+					}
+			}
+
+			//隐藏搜索框表单的函数
+			function hidden_from() {
+				for(var j = 0; j < forms.length; j++) {
+					forms[j].style.display = "none";
+				}
+			}
+		</script>
+	</body>
+
+</html>
